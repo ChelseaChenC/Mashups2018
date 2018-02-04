@@ -1,13 +1,37 @@
-let port = process.env.PORT || 8000;
 
-// Get the express web application framework
-let express = require('express');
-// Create an express app
-let app = express();
-// Make a web application server!
-let server = require('http').createServer(app).listen(port, function () {
-  console.log('Server listening at port: ', port);
-});
 
-// Tell server where to look for files
-app.use(express.static('public'));
+
+// HTTP Portion
+var http = require('http');
+var fs = require('fs'); // Using the filesystem module
+var httpServer = http.createServer(requestHandler);
+var url = require('url');
+httpServer.listen(8080);
+
+function requestHandler(req, res) {
+
+	var parsedUrl = url.parse(req.url);
+	console.log("The Request is: " + parsedUrl.pathname);
+		
+	fs.readFile(__dirname + parsedUrl.pathname, 
+		// Callback function for reading
+		function (err, data) {
+			// if there is an error
+			if (err) {
+				res.writeHead(500);
+				return res.end('Error loading ' + parsedUrl.pathname);
+			}
+			// Otherwise, send the data, the contents of the file
+			res.writeHead(200);
+			res.end(data);
+  		}
+  	);
+  	
+  	// Tell server where to look for files
+    app.use(express.static('public'));
+
+  	/*
+  	res.writeHead(200);
+  	res.end("Life is wonderful");
+  	*/
+}

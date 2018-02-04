@@ -1,13 +1,12 @@
 let bubbles = [];
 let canvas;
-// let img;
+var weather;
 
-// let weather;
+let api = 'http://api.openweathermap.org/data/2.5/weather?q=';
+let apiKey = '&APPID=001b0f58045147663b1ea518d34d88b4';
+let units = '&units=metric';
 
-// let api = 'http://api.openweathermap.org/data/2.5/weather?q=';
-// let apiKey = 'de466b967a32811e5f43df6e178f8bae';
-// let units = '&units=metric';
-// let input;
+let input;
 
 
 
@@ -21,12 +20,21 @@ function setup() {
   }
   stroke(136, 119, 236);
 
-  // let button = select("#submit");
-  // button.mousePressed(weatherAsk);
+  var button = select('#submit');
+  button.mousePressed(weatherAsk);
 
-  // input = select("#city");
+  input = select('#city');
 }
 
+function weatherAsk() {
+  let url = api + input.value() + apiKey + units;
+  loadJSON(url, gotData);
+}
+
+
+function gotData(data) {
+  weather = data;
+}
 
 //generate balls by mousePressed
 function mousePressed() {
@@ -53,20 +61,14 @@ function draw() {
     bubbles[i].update();
   }
 
-  //  if(weather){
-  //   let humidity = weather.main.humidity;
-  //   let temp = weather.main.temp; 
-  //   ellipse(100, 100, temp, temp);
-  //   ellipse(300, 100, humidity, humidity);
-  // }
+   if(weather){
+    let humidity = weather.main.humidity;
+    ellipse(1200, 500, humidity, humidity);
+  }
+
+  // image(img, windowWidth-100, windowHeight-100, 100, 100);
 }
 
-// function weatherAsk() {
-//   let url = api + "Brighton" + apiKey + units;
-//   loadJSON(url, gotData);
-// }
+function flower(){
 
-
-// function gotData(data) {
-//   weather = data;
-// }
+}
