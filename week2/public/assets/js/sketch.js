@@ -7,6 +7,8 @@ let apiKey = '&APPID=001b0f58045147663b1ea518d34d88b4';
 let units = '&units=metric';
 
 let input;
+let img;
+
 
 
 
@@ -24,7 +26,10 @@ function setup() {
   button.mousePressed(weatherAsk);
 
   input = select('#city');
+
+
 }
+
 
 function weatherAsk() {
   let url = api + input.value() + apiKey + units;
@@ -34,6 +39,9 @@ function weatherAsk() {
 
 function gotData(data) {
   weather = data;
+  let pic = document.getElementById('flower');
+  let r = weather.main.humidity;
+  pic.width = r*5;
 }
 
 //generate balls by mousePressed
@@ -61,14 +69,8 @@ function draw() {
     bubbles[i].update();
   }
 
-   if(weather){
-    let humidity = weather.main.humidity;
-    ellipse(1200, 500, humidity, humidity);
-  }
-
-  // image(img, windowWidth-100, windowHeight-100, 100, 100);
 }
 
-function flower(){
 
-}
+
+// }
