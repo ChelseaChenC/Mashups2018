@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+
+body{
+  font-family: 'Ubuntu', sans-serif;
+  padding-top: 2vh; 
+  position: relative;
+  display: block;
+  width: 100vw;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+circle {
+  stroke: #fff;
+}
+
+h4{
+  position: absolute;
+  left: 45vw;
+  text-align: center;
+}
+
+button{
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+  left: 47vw;
+  top: 82vh;
+  border: 1px solid;
+}
+
+.text{
+  position: absolute;
+  font-size: 9;
+  top: 90vh;
+  left: 39vw;
+  text-align: center;
+}
+
+#Queens{
+  color: #91B496;
+}
+
+#Brooklyn{
+  color: #F4B350;
+}
+
+#Manhattan{
+  color: #1E8BC3;
+}
+
+#Staten{
+  color: #E08283;
+}
+
+#Bronx{
+  color: #BE90D4;
+}

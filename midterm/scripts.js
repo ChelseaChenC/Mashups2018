@@ -104,7 +104,7 @@ var app = {
 	},
 
 	makeImage: function(dateV2, i){
-		var api_key = ;
+		var api_key = "GP3f9XkpC6mtO7yKC2gEwtjVJRBv2v7JKYNy3wvq";
 
 		var theImage = "https://api.nasa.gov/EPIC/archive/enhanced/" + dateV2 + "/jpg/" + app.imageList[i] + ".jpg?api_key=" + api_key;
 		 console.log("Here is the theImageURL: ");

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>NASA EPIC</title> 
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script src='https://code.jquery.com/jquery-1.4.4.min.js'></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.js"></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js'></script>
+        <link rel="stylesheet" type="text/css" href="./jquery-ui-1.9.2.custom.min.css">
+        <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+
+	</head>
+	<body>
+
+		<img class="stars" src="stars.jpg">
+		<div class="container">
+
+			<div class="datepicker">
+				<p id="pickADay">PICK A DAY</p>
+                <input type="text" id="datepicker">
+              
+			</div>
+
+			<div class="halmet">
+
+				<img class="halmet" src="halmet.png">
+				
+
+			</div>
+
+
+			<div class="earth">
+
+				<div class="planet_shadow"></div>
+				<div class="earth_photo"></div>
+
+				<!-- <div class="planet_photo"></div> -->
+			</div>
+			
+
+                
+			<div class="buttons">
+			   	<div class="left">
+			   		<i id="left" class="material-icons">keyboard_arrow_left</i>
+			   		
+			   	</div>
+
+			   	<div class="right">
+			   		<i id="right" class="material-icons">keyboard_arrow_right</i>
+			   		
+			   	</div>
+			   	
+			</div>
+		 
+
+		 	
+	
+		</div>
+
+		<br>
+		<br>
+		    <div id="name"> <p>Designed and developed by Chelsea Chen Chen 2018</p>
+
+
+
+         
+			
+		    
+
+			
+			
+		
+
+
+		<script src="scripts.js"></script>
+		<script type="text/javascript">
+
+
+
+			console.log("Loading...");
+
+			$(document).ready(function(){
+				console.log("The document is ready.");
+				app.initialize();
+			});
+		</script>
+
+
+	</body>
+</html>
