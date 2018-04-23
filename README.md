@@ -10,3 +10,6 @@ http://cc5847.itp.io:3838/
 
 Week8: D3 Data Visualization + NYC Directory Of Toilets In Public Parks API
 http://cc5847.itp.io:3839/
+
+Final work: D3 data visualization + Tate Museum Artists API
+http://cc5847.itp.io:3840/
